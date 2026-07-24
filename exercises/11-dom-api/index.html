@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>11. DOM API 演習</title>
+</head>
+<body>
+<h1>メンバー一覧（DOM操作の練習）</h1>
+<ul id="member-list"></ul>
+
+<script type="module">
+    import { renderMemberList } from "./todo.js"
+
+    const members = [
+        { name: "Alice", score: 74 },
+        { name: "Bob", score: 35 },
+        { name: "Carol", score: 41 }
+    ]
+
+    renderMemberList(document.querySelector("#member-list"), members)
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>13. セキュリティ意識（XSS対策）演習（模範解答）</title>
+</head>
+<body>
+<h1>ユーザーコメント表示（XSS対策の練習・模範解答）</h1>
+<div id="comment"></div>
+
+<script type="module">
+    import { renderUserComment } from "./todo.js"
+
+    const dangerousComment = '<img src="x" onerror="alert(\'XSS発生！\')">この文章が安全に表示されればOKです'
+
+    renderUserComment(document.querySelector("#comment"), dangerousComment)
+</script>
+</body>
+</html>
