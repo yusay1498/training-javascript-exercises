@@ -11,6 +11,7 @@ let cards = []
 let flippedIds = []
 let moves = 0
 let isBusy = false // 2枚めくって判定中は操作をロックする
+let pendingTimeoutId = null // 不一致時に「表を戻す」ためのsetTimeoutのID
 
 function render() {
     boardEl.textContent = ""
@@ -59,7 +60,8 @@ function handleCardClick(id) {
             messageEl.textContent = `クリア！ 手数: ${moves}`
         }
     } else {
-        setTimeout(() => {
+        pendingTimeoutId = setTimeout(() => {
+            pendingTimeoutId = null
             flippedIds = []
             isBusy = false
             render()
@@ -68,6 +70,13 @@ function handleCardClick(id) {
 }
 
 function startNewGame() {
+    // 直前の不一致判定のタイマーが残っていると、新しいゲームの途中で予期せず発火してしまうため、
+    // 先に無効化しておく（https://developer.mozilla.org/docs/Web/API/clearTimeout）
+    if (pendingTimeoutId !== null) {
+        clearTimeout(pendingTimeoutId)
+        pendingTimeoutId = null
+    }
+
     cards = createDeck(SYMBOLS)
     flippedIds = []
     moves = 0
