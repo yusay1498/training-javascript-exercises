@@ -1,0 +1,25 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 質問・相談
+    url: https://github.com/yusay1498/training-react-exercises/discussions/new?category=質問
+    about: バグ報告やリクエスト以外の質問・相談はDiscussionsをご利用ください。
+
+# Issue作成時のテンプレート設定
+defaults:
+  - template: "bug_report.yml"
+    name: "🐛 バグ報告"
+    about: "バグを報告する"
+    labels: ["bug"]
+  - template: "request.yml"
+    name: "💡 リクエスト"
+    about: "要望を提案する"
+    labels: ["enhancement"]
+
+# ラベルのプリセットを追加
+labels:
+  - name: "bug"
+    color: "d73a4a"
+    description: "バグや不具合"
+  - name: "enhancement"
+    color: "a2eeef"
+    description: "新機能や改善提案"
