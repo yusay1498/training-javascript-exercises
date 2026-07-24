@@ -70,8 +70,8 @@ flowchart LR
 
 この演習問題集は、受講生の皆さんの声を反映しながら改善していく予定です。
 
-- **質問・分からないこと・相談したいこと** は、GitHubの **Discussions** に投稿してください。
-- **誤字脱字・不具合・改善提案** など明確な問題は、GitHubの **Issue** として登録してください。
+- **質問・分からないこと・相談したいこと** は、[Discussions](https://github.com/yusay1498/training-javascript-exercises/discussions) に投稿してください。
+- **誤字脱字・不具合・改善提案** など明確な問題は、[Issue](https://github.com/yusay1498/training-javascript-exercises/issues) として登録してください。
 
 いただいた内容は運営側で確認し、随時演習内容の修正・改善に反映していきます。
 お気軽に投稿してください。
