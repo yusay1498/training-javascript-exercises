@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>神経衰弱</title>
+    <style>
+        #board {
+            display: grid;
+            grid-template-columns: repeat(4, 60px);
+            gap: 8px;
+        }
+
+        #board button {
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+<h1>神経衰弱</h1>
+
+<div id="board"></div>
+
+<p id="moves"></p>
+<p id="message"></p>
+<button id="reset-button">最初から</button>
+
+<script type="module" src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDoリスト</title>
+</head>
+<body>
+<h1>ToDoリスト</h1>
+
+<form id="todo-form">
+    <input type="text" id="todo-input" placeholder="やることを入力">
+    <button type="submit">追加</button>
+</form>
+
+<div>
+    <button data-filter="all">すべて</button>
+    <button data-filter="active">未完了</button>
+    <button data-filter="done">完了済み</button>
+</div>
+
+<ul id="todo-list"></ul>
+
+<script type="module" src="./main.js"></script>
+</body>
+</html>
