@@ -35,7 +35,8 @@ async function init() {
     } catch (error) {
         loadingEl.style.display = "none"
         errorEl.style.display = "block"
-        renderUserComment(errorEl, error.message)
+        const message = error instanceof Error ? error.message : String(error)
+        renderUserComment(errorEl, message)
     }
 }
 
