@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Hit and Blow</title>
+</head>
+<body>
+<h1>Hit and Blow</h1>
+<p>重複のない4桁の数字を当ててください。</p>
+
+<form id="guess-form">
+    <input type="text" id="guess-input" maxlength="4" placeholder="例: 1234" required>
+    <button type="submit">予想する</button>
+</form>
+
+<p id="message"></p>
+<ul id="history"></ul>
+<button id="reset-button">もう一度遊ぶ</button>
+
+<script type="module" src="./main.js"></script>
+</body>
+</html>
