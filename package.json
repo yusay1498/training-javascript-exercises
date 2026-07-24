@@ -1,0 +1,8 @@
+{
+  "name": "training-javascript-exercises",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "npx serve ."
+  }
+}
